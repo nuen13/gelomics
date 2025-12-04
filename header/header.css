@@ -1,0 +1,13 @@
+*{
+    font-family: "Outfit", sans-serif;
+}
+
+
+.navbar-header .nav-btns-container .nav-btn{
+
+    font-size: 2rem;
+    font-weight: 300;
+    color: #2E1A65;
+
+    padding: 0 25px;
+}

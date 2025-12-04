@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header</title>
+
+
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+
+
+
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="header.css">
+
+</head>
+
+<body>
+
+
+    <!-- Include this script tag or install `@tailwindplus/elements` via npm: -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script> -->
+
+
+
+    <nav class="navbar-header w-full bg-pink-400">
+        <!-- <div class="navbar-container flex w-full 
+            max-w-sm sm:max-w-md md:max-w-lg lg:max-w-md 
+            xl:max-w-screen-[2000px] 2xl:max-w-screen-2xl
+            mx-auto items-center justify-between px-4 py-5 mt-7 sm:px-8
+            bg-red-500"> -->
+
+        <div class="navbar-container flex w-full 
+            max-w-[1800px]
+            mx-auto items-center justify-between px-4 py-5 mt-7 sm:px-8">
+
+
+            <!-- Mobile Menu Button (Hamburger) -->
+
+            <button data-collapse-toggle="navbar-default" type="button"
+                class="inline-flex items-center p-2  w-10 h-10 justify-center text-sm text-body rounded-base md:hidden hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-neutral-tertiary"
+                aria-controls="navbar-default" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14" />
+                </svg>
+            </button>
+            <!-- Code Here -->
+
+
+            <!-- Gelomics Logo -->
+            <div class="logo-container items-center justify-between flex mb-auto shrink-0">
+                <a href="https://gelomics.com" class="flex">
+                    <img src="https://gelomics.com/wp-content/uploads/2024/08/Gelomics-Logo_Horizontal_Purple.png"
+                        class="h-16 w-auto">
+                </a>
+            </div>
+
+
+            <!-- navigation buttons -->
+            <div class="hidden nav-btns-container w-full md:block md:w-auto" id="navbar-default">
+                <ul class="flex flex-col md:flex-row md:items-center md:space-x-6 md:p-4">
+                    <li>
+                        <a href="#" class="nav-btn">Products</a>
+                    </li>
+                    <li>
+                        <button class="nav-btn block items-center space-x-3">
+                            <span>Resouce</span>
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-btn ">Services </a>
+                    </li>
+                    <li>
+                        <button class="nav-btn  flex items-center space-x-3">
+                            <span>Company</span>
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                    </li>
+
+                </ul>
+            </div>
+
+            <!-- cart and contact  -->
+            <div class="cart-contact-container flex w-full md:flex md:w-auto items-center">
+
+                <!-- Cart button -->
+                <div class="cart-btn">
+                    <a href = "#">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="black" class="w-7 h-7">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M2.25 3h1.386c.51 0 .955.343 1.087.836L5.25 7.5h13.5l-1.5 6H7.5M9 21.75A1.5 1.5 0 119 18a1.5 1.5 0 010 3.75zm8.25 0A1.5 1.5 0 1117.25 18a1.5 1.5 0 010 3.75z" />
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Contact button -->
+
+                <div class="contact-btn">
+
+                    <button>
+                        <span>Contact</span>
+                    </button>
+                </div>
+
+
+            </div>
+    </nav>
+
+
+
+</body>
+
+</html>
