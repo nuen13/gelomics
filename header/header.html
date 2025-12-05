@@ -29,97 +29,304 @@
 <body>
 
 
-    <!-- Include this script tag or install `@tailwindplus/elements` via npm: -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script> -->
+
+    <nav class="navbar-header w-full bg-white">
+        <div
+            class="relative navbar-container max-w-[1800px] mx-auto flex items-center justify-between gap-4 px-4 py-5 mt-4 sm:px-8">
+
+            <!-- MOBILE MENU BUTTON -->
+
+            <div class="mobile-navbar  xl:hidden">
+                <button id="menu-toggle" class=" mobile-menu  inline-flex w-6 h-6">
+                    <i id="icon-open" class="fa fa-bars"></i>
+                    <i id="icon-close" class=" fa fa-times hidden"></i>
+                </button>
+
+                <div id="mobile-menu" class="mobile-menu-drop absolute left-0 top-full w-full shadow-lg hidden z-50">
+                    <ul class="flex flex-col px-4 py-4 space-y-2">
+                        <li>
+                            <a href="https://gelomics.com/products/" class="nav-btn">Products</a>
+                        </li>
+                        <li class="relative group">
+                            <button class="nav-btn flex items-center gap-3" data-dropdown="resources">
+                                <span>Resources</span>
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+
+                            <div id="dropdown-resources"
+                                class="mobile-nav-btn-drop relative hidden left-2 py-4 w-60 z-50">
+                                <a href="https://gelomics.com/3d-cell-culture/#" class="block px-4 py-2">
+                                    Cell culture</a>
+                                <div class="relative group/submenu">
+                                    <a class="relative block px-4 py-2">
+                                        <button class="flex items-center gap-3" data-dropdown="industries">
+                                            <span class="pr-5">Industries</span>
+                                            <i class="fa fa-caret-right"></i>
+                                        </button>
+                                    </a>
+                                    <div id="dropdown-industries" class="mobile-nav-btn-drop-inside flex-nowrap relative left-4 top-0 ml-1 hidden w-full z-50">
+
+                                        <a href="https://gelomics.com/academia/" class="block px-4 py-2 ">Academia</a>
+                                        <a href="https://gelomics.com/pharmaceutical-companies/"
+                                            class="block px-4 py-2 whitespace-nowrap">Pharmaceutical Companies</a>
+                                        <a href="https://gelomics.com/cros/" class="block px-4 py-2 ">CROs</a>
+                                    </div>
+                                </div>
 
 
-
-    <nav class="navbar-header w-full bg-pink-400">
-        <!-- <div class="navbar-container flex w-full 
-            max-w-sm sm:max-w-md md:max-w-lg lg:max-w-md 
-            xl:max-w-screen-[2000px] 2xl:max-w-screen-2xl
-            mx-auto items-center justify-between px-4 py-5 mt-7 sm:px-8
-            bg-red-500"> -->
-
-        <div class="navbar-container flex w-full 
-            max-w-[1800px]
-            mx-auto items-center justify-between px-4 py-5 mt-7 sm:px-8">
+                                <div class="relative group/submenu">
+                                    <a class="relative block px-4 py-2">
+                                        <button class="flex items-center gap-3" data-dropdown="lunagel">
+                                            <span class="pr-5">LunaGel™</span>
+                                            <i class="fa fa-caret-right"></i>
+                                        </button>
 
 
-            <!-- Mobile Menu Button (Hamburger) -->
+                                    </a>
+                                    <div id="dropdown-lunagel"
+                                        class="mobile-nav-btn-drop-inside flex-nowrap relative left-4 top-0 ml-1 hidden w-full z-50">
+                                        <a href="https://gelomics.com/tuneable-stiffness/"
+                                            class="block px-4 py-2 whitespace-nowrap">Tuneable Stiffness</a>
+                                        <a href="https://gelomics.com/drug-responses/" class="block px-4 py-2">Drug
+                                            Response</a>
+                                        <a href="https://gelomics.com/angiogenesis-assays/"
+                                            class="block px-4 py-2">Angiogenesis</a>
+                                        <a href="https://gelomics.com/3d-bioprinting/" class="block px-4 py-2">3D
+                                            Bioprinting</a>
+                                        <a href="https://gelomics.com/tissue-engineering/"
+                                            class="block px-4 py-2 whitespace-nowrap">Tissue Engineering</a>
+                                        <a href="https://gelomics.com/in-vivo-models/" class="block px-4 py-2">In Vivo
+                                            Models</a>
+                                    </div>
+                                </div>
 
-            <button data-collapse-toggle="navbar-default" type="button"
-                class="inline-flex items-center p-2  w-10 h-10 justify-center text-sm text-body rounded-base md:hidden hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-neutral-tertiary"
-                aria-controls="navbar-default" aria-expanded="false">
-                <span class="sr-only">Open main menu</span>
-                <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                    fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14" />
-                </svg>
-            </button>
-            <!-- Code Here -->
+                                <a href="https://discover.gelomics.com/download-gelomics-white-papers?_gl=1*fwi8cm*_ga*NDE3ODgyOTM2LjE3NTY3Mjg3NDM.*_ga_KG8LJCGZWY*czE3NjQ4ODk1OTAkbzE4JGcxJHQxNzY0ODkxOTA3JGo0NiRsMCRoMA.."
+                                    class="block px-4 py-2">White Papers</a>
+                                <a href="https://discover.gelomics.com/download-gelomics-application-notes?_gl=1*fwi8cm*_ga*NDE3ODgyOTM2LjE3NTY3Mjg3NDM.*_ga_KG8LJCGZWY*czE3NjQ4ODk1OTAkbzE4JGcxJHQxNzY0ODkxOTA3JGo0NiRsMCRoMA.."
+                                    class="block px-4 py-2 whitespace-nowrap">Application Notes</a>
+                                <a href="https://gelomics.com/protocols/" class="block px-4 py-2">Protocols</a>
+                                <a href="https://discover.gelomics.com/publications?_gl=1*1cah5ho*_ga*NDE3ODgyOTM2LjE3NTY3Mjg3NDM."
+                                    class="block px-4 py-2">Publications</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="https://gelomics.com/services/" class="nav-btn ">Services </a>
+                        </li>
+                        <li class="relative group">
+                            <button class="nav-btn flex items-center gap-3" data-dropdown="company">
+                                <span>Company</span>
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+
+                            <div id = "dropdown-company"
+                                                                class="mobile-nav-btn-drop relative hidden left-2 py-4 w-60 z-50">
+
+                                <a href="https://gelomics.com/about-us/" class="block px-4 py-2 ">About
+                                    Us</a>
+                                <a href="https://gelomics.com/mission-vision/"
+                                    class="block px-4 py-2 ">Mission & Vision</a>
+                                <a href="https://gelomics.com/distributors/"
+                                    class="block px-4 py-2 ">Distribution</a>
+                                <a href="https://gelomics.com/join-our-team/"
+                                    class="block px-4 py-2 ">Careers</a>
+                                <a href="https://gelomics.com/news-and-events/"
+                                    class="block px-4 py-2 ">News & Events</a>
+
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
 
 
-            <!-- Gelomics Logo -->
-            <div class="logo-container items-center justify-between flex mb-auto shrink-0">
-                <a href="https://gelomics.com" class="flex">
+            <!-- Logo -->
+            <div id="logo-container"
+                class="flex items-center sm:justify-center md:justify-center xl:justify-start ml-10 md:ml-0 ">
+                <a id="logo" href="https://gelomics.com" class="flex shrink-0">
                     <img src="https://gelomics.com/wp-content/uploads/2024/08/Gelomics-Logo_Horizontal_Purple.png"
-                        class="h-16 w-auto">
+                        class="h-10 sm:h-12 md:h-12 lg:h-16 w-auto" />
                 </a>
             </div>
 
 
+
             <!-- navigation buttons -->
-            <div class="hidden nav-btns-container w-full md:block md:w-auto" id="navbar-default">
-                <ul class="flex flex-col md:flex-row md:items-center md:space-x-6 md:p-4">
+            <div class="nav-btns-container hidden md:hidden xl:block md:block md:w-auto justify-start"
+                id="navbar-default">
+                <ul class="flex flex-col md:flex-row md:items-center md:space-x-6 md:p-4 gap-2">
                     <li>
-                        <a href="#" class="nav-btn">Products</a>
+                        <a href="https://gelomics.com/products/" class="nav-btn">Products</a>
                     </li>
-                    <li>
-                        <button class="nav-btn block items-center space-x-3">
-                            <span>Resouce</span>
+                    <li class="relative group">
+                        <button class="nav-btn flex items-center gap-3">
+                            <span>Resources</span>
                             <i class="fa fa-caret-down"></i>
                         </button>
+
+                        <div
+                            class="nav-btn-drop absolute left-5 hidden group-hover:block shadow-lg rounded-xl py-4 w-60 z-50">
+                            <a href="https://gelomics.com/3d-cell-culture/#" class="block px-4 py-2 hover:bg-gray-100">3
+                                Cell culture</a>
+                            <div class="relative group/submenu">
+                                <a class="relative block px-4 py-2 hover:bg-gray-100">
+                                    <button class="flex items-center gap-3">
+                                        <span class="pr-5">Industries</span>
+                                        <i class="fa fa-caret-right"></i>
+                                    </button>
+
+
+                                </a>
+                                <div
+                                    class="nav-btn-drop absolute top-0 ml-1 left-full hidden group-hover/submenu:block 
+                                        bg-white shadow-lg rounded-xl py-4 w-64 z-50
+                                        transition-all duration-200 opacity-0 group-hover/submenu:opacity-100 translate-x-2 group-hover/submenu:translate-x-0">
+
+                                    <a href="https://gelomics.com/academia/"
+                                        class="block px-4 py-2 hover:bg-gray-100">Academia</a>
+                                    <a href="https://gelomics.com/pharmaceutical-companies/"
+                                        class="block px-4 py-2 hover:bg-gray-100">Pharmaceutical Companies</a>
+                                    <a href="https://gelomics.com/cros/"
+                                        class="block px-4 py-2 hover:bg-gray-100">CROs</a>
+                                </div>
+                            </div>
+
+
+                            <div class="relative group/submenu">
+                                <a class="relative block px-4 py-2 hover:bg-gray-100">
+                                    <button class="flex items-center gap-3">
+                                        <span class="pr-5">LunaGel™</span>
+                                        <i class="fa fa-caret-right"></i>
+                                    </button>
+
+
+                                </a>
+                                <div
+                                    class="nav-btn-drop absolute top-0 left-full ml-1 hidden group-hover/submenu:block 
+                                        bg-white shadow-lg rounded-lg py-4 w-64 z-50
+                                        transition-all duration-200 opacity-0 group-hover/submenu:opacity-100 translate-x-2 group-hover/submenu:translate-x-0">
+
+                                    <a href="https://gelomics.com/tuneable-stiffness/"
+                                        class="block px-4 py-2 hover:bg-gray-100">Tuneable Stiffness</a>
+                                    <a href="https://gelomics.com/drug-responses/"
+                                        class="block px-4 py-2 hover:bg-gray-100">Drug Response</a>
+                                    <a href="https://gelomics.com/angiogenesis-assays/"
+                                        class="block px-4 py-2 hover:bg-gray-100">Angiogenesis</a>
+                                    <a href="https://gelomics.com/3d-bioprinting/"
+                                        class="block px-4 py-2 hover:bg-gray-100">3D Bioprinting</a>
+                                    <a href="https://gelomics.com/tissue-engineering/"
+                                        class="block px-4 py-2 hover:bg-gray-100">Tissue Engineering</a>
+                                    <a href="https://gelomics.com/in-vivo-models/"
+                                        class="block px-4 py-2 hover:bg-gray-100">In Vivo Models</a>
+                                </div>
+                            </div>
+
+                            <a href="https://discover.gelomics.com/download-gelomics-white-papers?_gl=1*fwi8cm*_ga*NDE3ODgyOTM2LjE3NTY3Mjg3NDM.*_ga_KG8LJCGZWY*czE3NjQ4ODk1OTAkbzE4JGcxJHQxNzY0ODkxOTA3JGo0NiRsMCRoMA.."
+                                class="block px-4 py-2 hover:bg-gray-100">White Papers</a>
+                            <a href="https://discover.gelomics.com/download-gelomics-application-notes?_gl=1*fwi8cm*_ga*NDE3ODgyOTM2LjE3NTY3Mjg3NDM.*_ga_KG8LJCGZWY*czE3NjQ4ODk1OTAkbzE4JGcxJHQxNzY0ODkxOTA3JGo0NiRsMCRoMA.."
+                                class="block px-4 py-2 hover:bg-gray-100">Application Notes</a>
+                            <a href="https://gelomics.com/protocols/"
+                                class="block px-4 py-2 hover:bg-gray-100">Protocols</a>
+                            <a href="https://discover.gelomics.com/publications?_gl=1*1cah5ho*_ga*NDE3ODgyOTM2LjE3NTY3Mjg3NDM."
+                                class="block px-4 py-2 hover:bg-gray-100">Publications</a>
+                        </div>
                     </li>
                     <li>
-                        <a href="#" class="nav-btn ">Services </a>
+                        <a href="https://gelomics.com/services/" class="nav-btn ">Services </a>
                     </li>
-                    <li>
-                        <button class="nav-btn  flex items-center space-x-3">
+                    <li class="relative group">
+                        <button class="nav-btn flex items-center gap-3">
                             <span>Company</span>
                             <i class="fa fa-caret-down"></i>
                         </button>
+
+                        <div
+                            class="nav-btn-drop absolute left-5 hidden group-hover:block shadow-lg rounded-xl py-4 w-60 z-50">
+                            <a href="https://gelomics.com/about-us/" class="block px-4 py-2 hover:bg-gray-100">About
+                                Us</a>
+                            <a href="https://gelomics.com/mission-vision/"
+                                class="block px-4 py-2 hover:bg-gray-100">Mission & Vision</a>
+                            <a href="https://gelomics.com/distributors/"
+                                class="block px-4 py-2 hover:bg-gray-100">Distribution</a>
+                            <a href="https://gelomics.com/join-our-team/"
+                                class="block px-4 py-2 hover:bg-gray-100">Careers</a>
+                            <a href="https://gelomics.com/news-and-events/"
+                                class="block px-4 py-2 hover:bg-gray-100">News & Events</a>
+
+                        </div>
                     </li>
 
                 </ul>
             </div>
 
             <!-- cart and contact  -->
-            <div class="cart-contact-container flex w-full md:flex md:w-auto items-center">
+            <div class="cart-contact-container flex w-full md:flex md:w-auto items-center ">
 
-                <!-- Cart button -->
-                <div class="cart-btn">
-                    <a href = "#">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="black" class="w-7 h-7">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M2.25 3h1.386c.51 0 .955.343 1.087.836L5.25 7.5h13.5l-1.5 6H7.5M9 21.75A1.5 1.5 0 119 18a1.5 1.5 0 010 3.75zm8.25 0A1.5 1.5 0 1117.25 18a1.5 1.5 0 010 3.75z" />
+                <!-- Cart button
+                <div class="cart-btn items-center space-x-10">
+                    <a href="#">
+
+                        <svg class="w-10 h-20 mx-7" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M708 854C708 889 736 917 771 917 805 917 833 889 833 854 833 820 805 792 771 792 736 792 708 820 708 854ZM188 167L938 167C950 167 960 178 958 190L926 450C919 502 875 542 822 542L263 542 271 583C281 632 324 667 373 667L854 667C866 667 875 676 875 687 875 699 866 708 854 708L373 708C304 708 244 659 230 591L129 83 21 83C9 83 0 74 0 62 0 51 9 42 21 42L146 42C156 42 164 49 166 58L188 167ZM196 208L255 500 822 500C854 500 880 476 884 445L914 208 196 208ZM667 854C667 797 713 750 771 750 828 750 875 797 875 854 875 912 828 958 771 958 713 958 667 912 667 854ZM250 854C250 797 297 750 354 750 412 750 458 797 458 854 458 912 412 958 354 958 297 958 250 912 250 854ZM292 854C292 889 320 917 354 917 389 917 417 889 417 854 417 820 389 792 354 792 320 792 292 820 292 854Z">
+                            </path>
                         </svg>
+
                     </a>
-                </div>
+                </div> -->
 
                 <!-- Contact button -->
 
-                <div class="contact-btn">
-
-                    <button>
-                        <span>Contact</span>
-                    </button>
+                <div id="contact-btn-container" class="hidden md:flex">
+                    <a href="https://gelomics.com/contact-us/">
+                        <button class="contact-btn flex items-center gap-3 px-6 py-2 xl:px-4 xl:py-2 rounded-full">
+                            Contact Us
+                            <i class="fa fa-arrow-right"></i>
+                        </button>
+                    </a>
                 </div>
 
 
+
+
             </div>
+
+
+
     </nav>
+
+
+    <script>
+        const toggleBtn = document.getElementById("menu-toggle");
+        const menu = document.getElementById("mobile-menu");
+        const iconOpen = document.getElementById("icon-open");
+        const iconClose = document.getElementById("icon-close");
+
+
+        const logoContainer = document.getElementById("logo-container");
+        const contactContainer = document.getElementById("contact-btn-container")
+
+        toggleBtn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+
+            // hide the whole container so it no longer takes space
+            // logoContainer.classList.toggle("hidden");
+
+            iconOpen.classList.toggle("hidden");
+            iconClose.classList.toggle("hidden");
+            // contactContainer.classList.toggle("md:hidden")
+        });
+
+        document.querySelectorAll("[data-dropdown]").forEach(btn => {
+            btn.addEventListener("click", () => {
+                let target = "dropdown-" + btn.dataset.dropdown;
+                document.getElementById(target).classList.toggle("hidden");
+            });
+        });
+
+    </script>
+
+
 
 
 

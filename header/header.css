@@ -1,3 +1,13 @@
+/* 
+    --e-global-color-primary: #3A1078;
+    --e-global-color-secondary: #D86ECC;
+    --e-global-color-text: #000000;
+    --e-global-color-accent: #CCC0FF;
+    --e-global-color-e014b9f: #FFFFFF;
+    --e-global-color-dfc6c55: #3795BD;
+    --e-global-color-4f498eb: #D2EFF9;
+    --e-global-color-dfeaa39: #FFBBF9; */
+
 *{
     font-family: "Outfit", sans-serif;
 }
@@ -5,9 +15,94 @@
 
 .navbar-header .nav-btns-container .nav-btn{
 
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 300;
     color: #2E1A65;
 
     padding: 0 25px;
+    transition: all 0.2s;
+}
+
+
+.navbar-header .nav-btns-container .nav-btn:hover{
+    color: #D86ECC;
+    font-weight: 350;
+    transition: all 0.2s;
+}
+
+
+.navbar-header .nav-btns-container .nav-btn-drop{
+    
+    font-size: 1.5rem;
+    font-weight: 300;
+
+
+    background: #CCC0FF;
+    
+}
+
+.navbar-header .cart-contact-container .cart-btn{
+    
+    fill:#2E1A65 ;
+    transition: all 0.2s;
+}
+
+
+.navbar-header .cart-contact-container .cart-btn:hover{
+
+    
+    fill: #D86ECC;
+    transition: all 0.2s;
+}
+
+
+.navbar-header .cart-contact-container .contact-btn{
+    
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #D86ECC;
+    width: 100%;
+    border: 3px solid #D86ECC;
+    transition: all 0.2s;
+}
+
+.navbar-header .cart-contact-container .contact-btn:hover{
+    
+    background: #D86ECC;
+    color: white;
+    transition: all 0.2s;
+}
+
+
+/* MOBILE MENU CSS  */
+
+.navbar-header .mobile-menu i {
+    
+    color: #2E1A65;
+    font-size: 2rem;
+    
+}
+
+
+.navbar-header .mobile-menu-drop{
+
+    background: #ebe9e9;
+    font-size: 2rem;
+    font-weight: 400;
+    color: black;
+
+}
+
+
+.navbar-header .mobile-nav-btn-drop{
+    font-size: 1.7rem;
+    font-weight: 400;
+    color: black;
+}
+
+
+.navbar-header .mobile-nav-btn-drop .mobile-nav-btn-drop-inside{
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: black;
 }
