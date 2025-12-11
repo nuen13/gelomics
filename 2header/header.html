@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Header</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="header.css">
+</head>
+
+<body>
+
+    <nav class="navbar-header w-full bg-white sticky top-0 z-50 shadow-md">
+        <div class="navbar-container max-w-[1800px] mx-auto flex items-center justify-between gap-4 px-4 py-3 lg:px-8">
+
+            <div id="logo-container" class="flex items-center">
+                <a id="logo" href="https://gelomics.com" class="flex shrink-0">
+                    <img src="https://gelomics.com/wp-content/uploads/2024/08/Gelomics-Logo_Horizontal_Purple.png"
+                        class="h-10 md:h-12 w-auto" alt="Gelomics Logo" />
+                </a>
+            </div>
+
+            <div class="hidden lg:flex lg:items-center lg:space-x-4 xl:space-x-8" id="navbar-desktop">
+                <ul class="flex items-center">
+                    <li>
+                        <a href="https://gelomics.com/products/" class="nav-btn">Products</a>
+                    </li>
+                    <li class="relative group">
+                        <button class="nav-btn flex items-center gap-2">
+                            <span>Resources</span>
+                            <i class="fa fa-caret-down text-purple-700"></i>
+                        </button>
+                        <div
+                            class="nav-btn-drop absolute left-0 top-full hidden group-hover:block shadow-lg rounded-xl py-2 w-64 z-50">
+                            <a href="https://gelomics.com/3d-cell-culture/#" class="block px-4 py-2 drop-link">3D Cell
+                                culture</a>
+
+                            <div class="relative group/submenu">
+                                <button class="w-full flex justify-between items-center px-4 py-2 drop-link">
+                                    <span>Industries</span>
+                                    <i class="fa fa-caret-right text-purple-700"></i>
+                                </button>
+                                <div
+                                    class="nav-btn-drop absolute top-0 left-full ml-1 hidden group-hover/submenu:block shadow-lg rounded-xl py-2 w-64 z-50">
+                                    <a href="https://gelomics.com/academia/"
+                                        class="block px-4 py-2 drop-link">Academia</a>
+                                    <a href="https://gelomics.com/pharmaceutical-companies/"
+                                        class="block px-4 py-2 drop-link">Pharmaceutical Companies</a>
+                                    <a href="https://gelomics.com/cros/" class="block px-4 py-2 drop-link">CROs</a>
+                                </div>
+                            </div>
+                            <div class="relative group/submenu">
+                                <button class="w-full flex justify-between items-center px-4 py-2 drop-link">
+                                    <span>LunaGel™</span>
+                                    <i class="fa fa-caret-right text-purple-700"></i>
+                                </button>
+                                <div
+                                    class="nav-btn-drop absolute top-0 left-full ml-1 hidden group-hover/submenu:block shadow-lg rounded-xl py-2 w-64 z-50">
+                                    <a href="https://gelomics.com/tuneable-stiffness/"
+                                        class="block px-4 py-2 drop-link">Tuneable Stiffness</a>
+                                    <a href="https://gelomics.com/drug-responses/"
+                                        class="block px-4 py-2 drop-link">Drug Response</a>
+                                    <a href="https://gelomics.com/angiogenesis-assays/"
+                                        class="block px-4 py-2 drop-link">Angiogenesis</a>
+                                    <a href="https://gelomics.com/3d-bioprinting/" class="block px-4 py-2 drop-link">3D
+                                        Bioprinting</a>
+                                    <a href="https://gelomics.com/tissue-engineering/"
+                                        class="block px-4 py-2 drop-link">Tissue Engineering</a>
+                                    <a href="https://gelomics.com/in-vivo-models/" class="block px-4 py-2 drop-link">In
+                                        Vivo Models</a>
+                                </div>
+                            </div>
+
+                            <a href="#" class="block px-4 py-2 drop-link">White Papers</a>
+                            <a href="#" class="block px-4 py-2 drop-link">Application Notes</a>
+                            <a href="https://gelomics.com/protocols/" class="block px-4 py-2 drop-link">Protocols</a>
+                            <a href="#" class="block px-4 py-2 drop-link">Publications</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="https://gelomics.com/services/" class="nav-btn">Services</a>
+                    </li>
+                    <li class="relative group">
+                        <button class="nav-btn flex items-center gap-2">
+                            <span>Company</span>
+                            <i class="fa fa-caret-down text-purple-700"></i>
+                        </button>
+                        <div
+                            class="nav-btn-drop absolute left-0 top-full hidden group-hover:block shadow-lg rounded-xl py-2 w-60 z-50">
+                            <a href="https://gelomics.com/about-us/" class="block px-4 py-2 drop-link">About Us</a>
+                            <a href="https://gelomics.com/mission-vision/" class="block px-4 py-2 drop-link">Mission &
+                                Vision</a>
+                            <a href="https://gelomics.com/distributors/"
+                                class="block px-4 py-2 drop-link">Distribution</a>
+                            <a href="https://gelomics.com/join-our-team/" class="block px-4 py-2 drop-link">Careers</a>
+                            <a href="https://gelomics.com/news-and-events/" class="block px-4 py-2 drop-link">News &
+                                Events</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <div id="contact-btn-container" class="hidden md:flex">
+                    <a href="https://gelomics.com/contact-us/">
+                        <button class="contact-btn flex items-center gap-3 px-6 py-2 rounded-full">
+                            Contact Us
+                            <i class="fa fa-arrow-right"></i>
+                        </button>
+                    </a>
+                </div>
+
+                <div class="lg:hidden">
+                    <button id="menu-toggle" class="mobile-menu-toggle inline-flex w-8 h-8 items-center justify-center">
+                        <i id="icon-open" class="fa fa-bars"></i>
+                        <i id="icon-close" class="fa fa-times hidden"></i>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="mobile-menu" class="mobile-menu-drop lg:hidden absolute left-0 top-full w-full shadow-lg hidden z-40">
+            <ul class="flex flex-col px-4 py-4 space-y-2">
+                <li>
+                    <a href="https://gelomics.com/products/" class="nav-btn block py-2">Products</a>
+                </li>
+                <li class="group">
+                    <button class="nav-btn mobile-dropdown-btn flex items-center justify-between w-full py-2"
+                        data-dropdown="resources">
+                        <span>Resources</span>
+                        <i class="fa fa-caret-down text-purple-700 mobile-caret"></i>
+                    </button>
+                    <div id="dropdown-resources" class="mobile-nav-btn-drop py-2 pl-4 hidden">
+                        <a href="https://gelomics.com/3d-cell-culture/#" class="block py-2 drop-link">3D Cell culture</a>
+                        <div class="group/submenu">
+                            <button class="w-full flex items-center justify-between py-2 drop-link"
+                                data-dropdown="industries">
+                                <span>Industries</span>
+                                <i class="fa fa-caret-right text-purple-700 mobile-caret"></i>
+                            </button>
+                            <div id="dropdown-industries" class="mobile-nav-btn-drop-inside py-2 pl-4 hidden">
+                                <a href="https://gelomics.com/academia/" class="block py-1 drop-link">Academia</a>
+                                <a href="https://gelomics.com/pharmaceutical-companies/"
+                                    class="block py-1 drop-link">Pharmaceutical Companies</a>
+                                <a href="https://gelomics.com/cros/" class="block py-1 drop-link">CROs</a>
+                            </div>
+                        </div>
+                        <div class="group/submenu">
+                            <button class="w-full flex items-center justify-between py-2 drop-link"
+                                data-dropdown="lunagel">
+                                <span>LunaGel™</span>
+                                <i class="fa fa-caret-right text-purple-700 mobile-caret"></i>
+                            </button>
+                            <div id="dropdown-lunagel" class="mobile-nav-btn-drop-inside py-2 pl-4 hidden">
+                                <a href="https://gelomics.com/tuneable-stiffness/" class="block py-1 drop-link">Tuneable
+                                    Stiffness</a>
+                                <a href="https://gelomics.com/drug-responses/" class="block py-1 drop-link">Drug
+                                    Response</a>
+                                <a href="https://gelomics.com/angiogenesis-assays/"
+                                    class="block py-1 drop-link">Angiogenesis</a>
+                                <a href="https://gelomics.com/3d-bioprinting/" class="block py-1 drop-link">3D
+                                    Bioprinting</a>
+                                <a href="https://gelomics.com/tissue-engineering/" class="block py-1 drop-link">Tissue
+                                    Engineering</a>
+                                <a href="https://gelomics.com/in-vivo-models/" class="block py-1 drop-link">In Vivo
+                                    Models</a>
+                            </div>
+                        </div>
+                        <a href="#" class="block py-2 drop-link">White Papers</a>
+                        <a href="#" class="block py-2 drop-link">Application Notes</a>
+                        <a href="https://gelomics.com/protocols/" class="block py-2 drop-link">Protocols</a>
+                        <a href="#" class="block py-2 drop-link">Publications</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="https://gelomics.com/services/" class="nav-btn block py-2">Services</a>
+                </li>
+                <li class="group">
+                    <button class="nav-btn mobile-dropdown-btn flex items-center justify-between w-full py-2"
+                        data-dropdown="company">
+                        <span>Company</span>
+                        <i class="fa fa-caret-down text-purple-700 mobile-caret"></i>
+                    </button>
+                    <div id="dropdown-company" class="mobile-nav-btn-drop py-2 pl-4 hidden">
+                        <a href="https://gelomics.com/about-us/" class="block py-2 drop-link">About Us</a>
+                        <a href="https://gelomics.com/mission-vision/" class="block py-2 drop-link">Mission & Vision</a>
+                        <a href="https://gelomics.com/distributors/" class="block py-2 drop-link">Distribution</a>
+                        <a href="https://gelomics.com/join-our-team/" class="block py-2 drop-link">Careers</a>
+                        <a href="https://gelomics.com/news-and-events/" class="block py-2 drop-link">News & Events</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <script>
+        const toggleBtn = document.getElementById("menu-toggle");
+        const menu = document.getElementById("mobile-menu");
+        const iconOpen = document.getElementById("icon-open");
+        const iconClose = document.getElementById("icon-close");
+
+        // Mobile Menu Toggle
+        toggleBtn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+            iconOpen.classList.toggle("hidden");
+            iconClose.classList.toggle("hidden");
+        });
+
+        // Mobile Dropdown Toggle (using the same data-dropdown pattern)
+        document.querySelectorAll(".mobile-dropdown-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                let targetId = "dropdown-" + btn.dataset.dropdown;
+                const targetDropdown = document.getElementById(targetId);
+                const caretIcon = btn.querySelector('.mobile-caret');
+
+                targetDropdown.classList.toggle("hidden");
+                // Optional: Rotate caret for visual feedback
+                if (caretIcon) {
+                    caretIcon.classList.toggle("fa-caret-down");
+                    caretIcon.classList.toggle("fa-caret-up");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

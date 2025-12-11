@@ -31,12 +31,17 @@
 
 
     <nav class="navbar-header w-full bg-white">
-        <div
-            class="relative navbar-container max-w-[1800px] mx-auto flex items-center justify-between gap-4 px-4 py-5 mt-4 sm:px-8">
+        <div class="relative navbar-container 
+     max-w-[1800px] mx-auto 
+     flex items-center justify-between 
+     gap-2 sm:gap-4 lg:gap-6 xl:gap-8
+     px-4 sm:px-6 lg:px-8 xl:px-12
+     py-4 lg:py-5 xl:py-6
+     mt-4">
 
             <!-- MOBILE MENU BUTTON -->
 
-            <div class="mobile-navbar  xl:hidden">
+            <div class="mobile-navbar xl:hidden">
                 <button id="menu-toggle" class=" mobile-menu  inline-flex w-6 h-6">
                     <i id="icon-open" class="fa fa-bars"></i>
                     <i id="icon-close" class=" fa fa-times hidden"></i>
@@ -145,16 +150,21 @@
                 class="flex items-center sm:justify-center md:justify-center xl:justify-start ml-10 md:ml-0 ">
                 <a id="logo" href="https://gelomics.com" class="flex shrink-0">
                     <img src="https://gelomics.com/wp-content/uploads/2024/08/Gelomics-Logo_Horizontal_Purple.png"
-                        class="h-10 sm:h-12 md:h-12 lg:h-16 w-auto" />
+                        class="h-10 sm:h-12 md:h-12 lg:h-12 xl:h-16 w-auto" />
                 </a>
             </div>
 
 
 
             <!-- navigation buttons -->
-            <div class="nav-btns-container hidden md:hidden xl:block md:block md:w-auto justify-start"
-                id="navbar-default">
-                <ul class="flex flex-col md:flex-row md:items-center md:space-x-6 md:p-4 gap-2">
+            <!-- <div class="nav-btns-container hidden md:hidden xl:block md:block md:w-auto justify-start"
+                id="navbar-default"> -->
+            <div class="nav-btns-container hidden lg:flex items-center" id = "navbar-default">
+
+                <ul class="flex flex-col lg:flex-row items-center 
+           lg:space-x-4 xl:space-x-6 
+           lg:text-[15px] xl:text-[16px]">
+
                     <li>
                         <a href="https://gelomics.com/products/" class="nav-btn">Products</a>
                     </li>
