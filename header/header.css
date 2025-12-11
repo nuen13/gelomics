@@ -1,108 +1,116 @@
-/* 
-    --e-global-color-primary: #3A1078;
-    --e-global-color-secondary: #D86ECC;
-    --e-global-color-text: #000000;
-    --e-global-color-accent: #CCC0FF;
-    --e-global-color-e014b9f: #FFFFFF;
-    --e-global-color-dfc6c55: #3795BD;
-    --e-global-color-4f498eb: #D2EFF9;
-    --e-global-color-dfeaa39: #FFBBF9; */
+/* Color Variables based on your provided palette */
+:root {
+    --color-primary: #3A1078;
+    --color-secondary: #D86ECC;
+    --color-text: #000000;
+    --color-accent: #CCC0FF;
+    --color-white: #FFFFFF;
+    --color-dark-purple: #2E1A65;
+    --color-light-grey: #ebe9e9;
+}
 
-*{
+* {
     font-family: "Outfit", sans-serif;
 }
 
+/* Main Navigation Links (Desktop) */
+.navbar-header .nav-btn {
+    font-size: 20px;
+    font-weight: 250;
+    color: var(--color-dark-purple);
+    padding: 10px 22px;
+    transition: all 0.2s;
+}
 
-.navbar-header .nav-btns-container .nav-btn{
+.navbar-header .nav-btn:hover {
+    color: var(--color-secondary);
+    font-weight: 250;
 
-    font-size: 1.8rem;
+    transition: all 0.2s
+}
+
+/* Dropdown Menu Container (Desktop) */
+.navbar-header .nav-btn-drop {
+    font-size: 1rem;
+    font-weight: 250;
+    background: var(--color-accent);
+    min-width: 180px; 
+    margin-top: 0px;
+}
+
+/* Dropdown Links (Desktop) */
+.navbar-header .nav-btn-drop .drop-link {
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.navbar-header .nav-btn-drop .drop-link:hover {
+    background-color: var(--color-dark-purple);
+    color: var(--color-white);
+}
+
+/* Contact Button */
+.navbar-header .contact-btn {
+    font-size: 1rem;
     font-weight: 300;
-    color: #2E1A65;
-
-    padding: 0 25px;
+    color: var(--color-secondary);
+    border: 2px solid var(--color-secondary);
     transition: all 0.2s;
 }
 
-
-.navbar-header .nav-btns-container .nav-btn:hover{
-    color: #D86ECC;
-    font-weight: 350;
-    transition: all 0.2s;
+.navbar-header .contact-btn:hover {
+    background: var(--color-secondary);
+    color: var(--color-white);
 }
 
 
-.navbar-header .nav-btns-container .nav-btn-drop{
-    
+/* |--------------------------------------------------------------------------
+| MOBILE NAVIGATION STYLES
+|--------------------------------------------------------------------------
+*/
+
+/* Mobile Toggle Icon */
+.navbar-header .mobile-menu-toggle i {
+    color: var(--color-dark-purple);
     font-size: 1.5rem;
+}
+
+/* Mobile Menu Dropdown Panel */
+.navbar-header .mobile-menu-drop {
+    background: var(--color-light-grey);
+    padding: 1rem 0;
+    /* Ensure text in the mobile menu is visible and readable */
+    font-size: 1.25rem; 
+    font-weight: 250;
+    color: var(--color-dark-purple);
+}
+
+/* Mobile Menu Dropdown Links (1st level) */
+.navbar-header .mobile-dropdown-btn {
+    font-size: 1.25rem; /* Larger for touch targets */
     font-weight: 300;
-
-
-    background: #CCC0FF;
-    
+    color: var(--color-dark-purple);
+    background: none;
+    border: none;
+    text-align: left;
 }
-
-.navbar-header .cart-contact-container .cart-btn{
-    
-    fill:#2E1A65 ;
-    transition: all 0.2s;
-}
-
-
-.navbar-header .cart-contact-container .cart-btn:hover{
-
-    
-    fill: #D86ECC;
-    transition: all 0.2s;
-}
-
-
-.navbar-header .cart-contact-container .contact-btn{
-    
-    font-size: 1.5rem;
+/* Mobile Sub-Dropdown Container (2nd level) */
+.navbar-header .mobile-nav-btn-drop {
+    font-size: 1.1rem;
     font-weight: 300;
-    color: #D86ECC;
-    width: 100%;
-    border: 3px solid #D86ECC;
-    transition: all 0.2s;
+    background: #e0dede; /* Slightly different background for visual hierarchy */
+    color: var(--color-dark-purple);
 }
 
-.navbar-header .cart-contact-container .contact-btn:hover{
-    
-    background: #D86ECC;
-    color: white;
-    transition: all 0.2s;
+/* Mobile Sub-Sub-Dropdown Container (3rd level) */
+.navbar-header .mobile-nav-btn-drop-inside {
+    font-size: 1rem;
+    font-weight: 300;
+    background: #d4d4d4; 
+    color: var(--color-dark-purple);
 }
 
-
-/* MOBILE MENU CSS  */
-
-.navbar-header .mobile-menu i {
-    
-    color: #2E1A65;
-    font-size: 2rem;
-    
-}
-
-
-.navbar-header .mobile-menu-drop{
-
-    background: #ebe9e9;
-    font-size: 2rem;
-    font-weight: 400;
-    color: black;
-
-}
-
-
-.navbar-header .mobile-nav-btn-drop{
-    font-size: 1.7rem;
-    font-weight: 400;
-    color: black;
-}
-
-
-.navbar-header .mobile-nav-btn-drop .mobile-nav-btn-drop-inside{
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: black;
+/* General Link Hover/Focus for Mobile Dropdowns */
+.navbar-header .mobile-menu-drop .drop-link:hover,
+.navbar-header .mobile-menu-drop .drop-link:focus {
+    color: var(--color-secondary);
 }
