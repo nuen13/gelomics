@@ -29,17 +29,18 @@
 <body>
 
     <nav class="navbar-header w-full bg-white top-0">
-        <!-- Mobile - Nav Buttons -->
         <div
-            class="navbar-container  w-full max-w-[1500px]    mx-auto flex items-center justify-around px-10 lg:px-16  py-6">
-            <div class="mobile-navbar xl:hidden">
-                <button id="menu-toggle" class=" mobile-menu  inline-flex w-6 h-6">
-                    <i id="icon-open" class="fa fa-bars"></i>
-                    <i id="icon-close" class=" fa fa-times hidden"></i>
+            class="navbar-container relative w-full max-w-[540px] md:max-w-[1500px] mx-auto flex items-center md:justify-around px-10 lg:px-16  py-1 lg:py-3">
+            <!-- Mobile - Nav Buttons -->
+            <div class=" mobile-navbar lg:hidden pl-0 re">
+                <button id="menu-toggle" class="mobile-menu  inline-flex w-12 h-5">
+                    <i id="icon-open" class="fa fa-bars text-2xl"></i>
+                    <i id="icon-close" class=" fa fa-times hidden text-2xl"></i>
                 </button>
 
-                <div id="mobile-menu" class="mobile-menu-drop absolute left-0 top-full w-full shadow-lg hidden z-50">
-                    <ul class="flex flex-col px-4 py-4 space-y-2">
+                <div id="mobile-menu"
+                    class="mobile-menu-drop slide-down absolute left-0 top-full w-full shadow-lg hidden z-50">
+                    <ul class="flex flex-col px-4 py-2 ">
                         <li>
                             <a href="https://gelomics.com/products/" class="nav-btn">Products</a>
                         </li>
@@ -50,9 +51,10 @@
                             </button>
 
                             <div id="dropdown-resources"
-                                class="mobile-nav-btn-drop relative hidden left-2 py-4 w-60 z-50">
+                                class="mobile-nav-btn-drop slide-down relative hidden left-4 pb-2 w-60 z-50">
+
                                 <a href="https://gelomics.com/3d-cell-culture/#" class="block px-4 py-2">
-                                    Cell culture</a>
+                                    3D Cell culture</a>
                                 <div class="relative group/submenu">
                                     <a class="relative block px-4 py-2">
                                         <button class="flex items-center gap-3" data-dropdown="industries">
@@ -61,7 +63,7 @@
                                         </button>
                                     </a>
                                     <div id="dropdown-industries"
-                                        class="mobile-nav-btn-drop-inside flex-nowrap relative left-4 top-0 ml-1 hidden w-full z-50">
+                                        class="mobile-nav-btn-drop-inside slide-down relative left-4 top-0 ml-1 hidden w-full z-50">
 
                                         <a href="https://gelomics.com/academia/" class="block px-4 py-2 ">Academia</a>
                                         <a href="https://gelomics.com/pharmaceutical-companies/"
@@ -78,10 +80,10 @@
                                             <i class="fa fa-caret-right"></i>
                                         </button>
 
-
                                     </a>
                                     <div id="dropdown-lunagel"
-                                        class="mobile-nav-btn-drop-inside flex-nowrap relative left-4 top-0 ml-1 hidden w-full z-50">
+                                        class="mobile-nav-btn-drop-inside slide-down relative left-4 top-0 ml-1 hidden w-full z-50">
+
                                         <a href="https://gelomics.com/tuneable-stiffness/"
                                             class="block px-4 py-2 whitespace-nowrap">Tuneable Stiffness</a>
                                         <a href="https://gelomics.com/drug-responses/" class="block px-4 py-2">Drug
@@ -116,7 +118,9 @@
                             </button>
 
                             <div id="dropdown-company"
-                                class="mobile-nav-btn-drop relative hidden left-2 py-4 w-60 z-50">
+                                class="mobile-nav-btn-drop slide-down relative hidden left-4 pb-2 w-60 z-50">
+
+
 
                                 <a href="https://gelomics.com/about-us/" class="block px-4 py-2 ">About
                                     Us</a>
@@ -135,11 +139,11 @@
             </div>
             <!-- Logo -->
             <div id="logo-container"
-                class="logo-container flex items-center sm:justify-center md:justify-between xl:justify-start ml-10 md:ml-0">
+                class="logo-container flex flex-1 lg:flex-none justify-center items-center m-3 md:m-5 md:justify-start">
 
                 <a id="logo" href="https://gelomics.com/" class="flex shrink-0">
                     <img src="https://gelomics.com/wp-content/uploads/2024/08/Gelomics-Logo_Horizontal_Purple.png"
-                        class="h-10 md:h-12 w-auto" alt="Gelomics Logo" />
+                        class="h-10 md:h-10 lg:h-10 w-auto" alt="Gelomics Logo" />
                 </a>
             </div>
             <!-- Desktop - nav buttons -->
@@ -156,8 +160,8 @@
                         </button>
 
                         <div
-                            class="nav-btn-drop absolute left-5 hidden group-hover:block shadow-lg rounded-xl py-4 w-60 z-50">
-                            <a href="https://gelomics.com/3d-cell-culture/#" class="block px-4 py-2 hover:bg-gray-100">3
+                            class="nav-btn-drop absolute left-5 hidden group-hover:block shadow-lg rounded-xl pb-5 w-60 z-50">
+                            <a href="https://gelomics.com/3d-cell-culture/#" class="block px-4 py-2 hover:bg-gray-100">
                                 Cell culture</a>
                             <div class="relative group/submenu">
                                 <a class="relative block px-4 py-1 hover:bg-gray-100">
@@ -264,41 +268,49 @@
             </div>
         </div>
 
-
-
-
-
     </nav>
 
 
 
     <script>
-        const toggleBtn = document.getElementById("menu-toggle");
-        const menu = document.getElementById("mobile-menu");
+        const menuToggle = document.getElementById("menu-toggle");
+        const mobileMenu = document.getElementById("mobile-menu");
         const iconOpen = document.getElementById("icon-open");
         const iconClose = document.getElementById("icon-close");
 
+        // Main mobile menu toggle
+        menuToggle.addEventListener("click", () => {
 
-        const logoContainer = document.getElementById("logo-container");
-        const contactContainer = document.getElementById("contact-btn-container")
-
-        toggleBtn.addEventListener("click", () => {
-            menu.classList.toggle("hidden");
-
+            if (mobileMenu.classList.contains("hidden")) {
+                mobileMenu.classList.remove("hidden");
+                setTimeout(() => mobileMenu.classList.add("open"), 10); // animate in
+            } else {
+                mobileMenu.classList.remove("open");
+                setTimeout(() => mobileMenu.classList.add("hidden"), 200); // wait for animation
+            }
 
             iconOpen.classList.toggle("hidden");
             iconClose.classList.toggle("hidden");
- 
         });
 
+        // Dropdown toggles
         document.querySelectorAll("[data-dropdown]").forEach(btn => {
             btn.addEventListener("click", () => {
-                let target = "dropdown-" + btn.dataset.dropdown;
-                document.getElementById(target).classList.toggle("hidden");
+                const target = document.getElementById("dropdown-" + btn.dataset.dropdown);
+
+                if (target.classList.contains("hidden")) {
+                    target.classList.remove("hidden");
+                    setTimeout(() => target.classList.add("open"), 10);
+                } else {
+                    target.classList.remove("open");
+                    setTimeout(() => target.classList.add("hidden"), 200);
+                }
             });
         });
 
+
     </script>
+
 
 
 
